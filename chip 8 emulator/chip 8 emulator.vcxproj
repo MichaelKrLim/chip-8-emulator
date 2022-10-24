@@ -132,7 +132,9 @@
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Gamestate.h" />
     <ClInclude Include="Keypresses.h" />
+    <ClInclude Include="lishgtts%27.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

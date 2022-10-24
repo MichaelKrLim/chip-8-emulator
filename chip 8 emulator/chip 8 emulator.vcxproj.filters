@@ -23,5 +23,11 @@
     <ClInclude Include="Keypresses.h">
       <Filter>Source Files</Filter>
     </ClInclude>
+    <ClInclude Include="lishgtts%27.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Gamestate.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

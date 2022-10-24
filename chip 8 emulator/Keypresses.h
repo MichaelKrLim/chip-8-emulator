@@ -1,8 +1,8 @@
-#pragma once
+#ifndef KEYPRESSES_H
+#define KEYPRESSES_H
 #include <SFML/Window/Keyboard.hpp>
 #include <array>
-
-
+ 
 struct Keypresses
 {
 public:
@@ -16,3 +16,5 @@ public:
 		sf::Keyboard::Key::Num4, sf::Keyboard::Key::R,    sf::Keyboard::Key::F, sf::Keyboard::Key::V 
 	};
 };
+
+#endif
