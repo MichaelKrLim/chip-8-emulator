@@ -155,7 +155,7 @@ void wait_for_keypress(Gamestate& game_state, const auto keypresses, auto Vx)
 	}
 }
 
-sf::Sprite create_sprite(sf::Texture texture)
+sf::Sprite create_sprite(sf::Texture &texture)
 {
 	sf::Sprite sprite(texture);
 
@@ -197,15 +197,15 @@ int main()
 
 	init_fonts(game_state.memory, font_start_address);
 	{
-		int i{};
+		int i{}; 
 		while (program.read(reinterpret_cast<char*>(&game_state.memory[512 + i]), 1))
 		{
 			++i;
 		} std::cerr << i << "\n";
 	}
-	//dump_memory(game_state.memory);
+	dump_memory(game_state.memory);
 	sf::RenderWindow window(sf::VideoMode(game_state.screen_width, game_state.screen_length), "My window");
-	//window.setFramerateLimit(60);
+	//window.setFramerateLimit(125);
 	while (window.isOpen())
 	{
 		game_state.I = game_state.I & 0xFFF;
@@ -337,7 +337,7 @@ int main()
 		{
 			auto register_x = game_state.registers[Vx];
 			auto register_y = game_state.registers[Vy];
-			auto bytes_in_sprite = instruction[1] % 16;
+			auto bytes_in_sprite = instruction[1] % base_hex;
 
 			draw_to_screen(game_state, bytes_in_sprite, register_x, register_y);
 			break;
